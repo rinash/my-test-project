@@ -47,7 +47,11 @@ const Items = ({ item, clearItem }) => {
         </p>
         <p className="card-text">{item.text}</p>
         <p>
-          See Code on <a href="https://github.com/">GitHub</a>.
+          See Code on{" "}
+          <a href="https://github.com/rinash/my-test-project" target="__blank">
+            GitHub
+          </a>
+          .
         </p>
         <Wrapper>
           <Button type="button" className="btn" onClick={clickHandler}>
