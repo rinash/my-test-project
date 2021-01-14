@@ -5,7 +5,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import NavBar from "./Common/NavBar";
+import NavBar from "./styled/NavBar";
 
 const Menu = () => {
   return (

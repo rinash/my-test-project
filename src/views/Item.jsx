@@ -7,10 +7,10 @@ import React, { useCallback } from "react";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { clearItem } from "../redux/actions";
-import { Button, Wrapper } from "./Common/Button";
-import Badge from "./Common/Badge";
+import { Button, Wrapper } from "../components/styled/Button";
+import Badge from "../components/styled/Badge";
 
-const Items = ({ item, clearItem }) => {
+const ItemView = ({ item, clearItem }) => {
   let history = useHistory();
 
   const clickHandler = useCallback(
@@ -64,7 +64,7 @@ const Items = ({ item, clearItem }) => {
 };
 
 const mapStateToProps = state => ({
-  item: state.items.item
+  item: state.item
 });
 
 const mapDispatchToProps = {
@@ -74,4 +74,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Items);
+)(ItemView);

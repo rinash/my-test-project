@@ -1,5 +1,5 @@
 import { LIGHT, DARK, CUSTOM } from "./index";
-import THEMES from "./themes";
+import THEMES from "./names";
 
 export const getTheme = themeName => {
   switch (themeName) {

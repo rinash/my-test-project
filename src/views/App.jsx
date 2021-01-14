@@ -4,13 +4,13 @@
  */
 
 import React from "react";
-import Menu from "./Menu";
+import Menu from "../components/Menu";
 import { ThemeProvider } from "styled-components";
-import { getTheme } from "../themes/getTheme";
+import { getTheme } from "../themes/common";
 import { connect } from "react-redux";
-import Container from "./Common/Container";
+import Container from "../components/styled/Container";
 
-const App = props => {
+const AppView = props => {
   return (
     <ThemeProvider theme={getTheme(props.theme)}>
       <Container>
@@ -22,10 +22,10 @@ const App = props => {
 };
 
 const mapStateToProps = state => ({
-  theme: state.items.item.theme
+  theme: state.item.theme
 });
 
 export default connect(
   mapStateToProps,
   null
-)(App);
+)(AppView);

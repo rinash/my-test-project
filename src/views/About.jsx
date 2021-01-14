@@ -5,7 +5,7 @@
 
 import React from "react";
 
-export default function About() {
+const AboutView = () => {
   return (
     <div className="container">
       <article>
@@ -13,8 +13,8 @@ export default function About() {
           <section className="text-section">
             <h1>Welcome to Test Project</h1>
             <p>
-              This app demonstrates a simple example of using a workflow based on React, React-Router, React-Redux, Bootstrap and
-              Styled-Components. The code can be find on{" "}
+              This app demonstrates a simple example of using a workflow based on React, React-Router, React-Redux, Bootstrap
+              and Styled-Components. The code can be find on{" "}
               <a href="https://github.com/rinash/my-test-project" target="__blank">
                 GitHub
               </a>
@@ -38,4 +38,6 @@ export default function About() {
       </article>
     </div>
   );
-}
+};
+
+export default AboutView;

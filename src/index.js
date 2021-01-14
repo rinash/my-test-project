@@ -1,26 +1,21 @@
 /**
- *
+ * Index page.
  * React, React-Route, Redux Test project.
  */
 
 import React from "react";
 import { Switch, Route } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
-/**
- * Index page.
- * React, React-Route, Redux Test project.
- */
-
 import ReactDOM from "react-dom";
-import App from "./Components/App";
-import Home from "./Components/Home";
-import Item from "./Components/Item";
-import About from "./Components/About";
 import reportWebVitals from "./reportWebVitals";
 import { compose, createStore } from "redux";
 import { Provider } from "react-redux";
 import { rootReducer } from "./redux/rootReducer";
-import NotFound from "./Components/NotFound";
+import App from "./views/App";
+import Home from "./views/Home";
+import About from "./views/About";
+import NotFound from "./views/NotFound";
+import Item from "./views/Item";
 
 const store = createStore(rootReducer, compose(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 

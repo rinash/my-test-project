@@ -1,11 +1,24 @@
 /**
- * Redux root reducer.
+ * Redux data reducer.
  * React, React-Route, Redux Test project.
  */
 
-import { combineReducers } from "redux";
-import { dataReducer } from "./dataReducer";
+const initialState = {
+  item: {
+    name: "",
+    date: "",
+    text: "",
+    theme: "light"
+  }
+};
 
-export const rootReducer = combineReducers({
-  items: dataReducer
-});
+export const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "CREATE_ITEM":
+      return { ...state, item: action.payload };
+    case "CLEAR_ITEM":
+      return { ...initialState };
+    default:
+      return state;
+  }
+};

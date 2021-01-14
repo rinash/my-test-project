@@ -7,11 +7,11 @@ import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { createItem } from "../redux/actions";
-import Dropdown from "./Dropdown";
-import { Button, Wrapper } from "./Common/Button";
-import { getThemeName } from "../themes/getTheme";
+import Dropdown from "../components/Dropdown";
+import { Button, Wrapper } from "../components/styled/Button";
+import { getThemeName } from "../themes/common";
 
-const Home = ({ createItem }) => {
+const HomeView = ({ createItem }) => {
   let history = useHistory();
 
   const [state, setState] = useState({
@@ -97,4 +97,4 @@ const mapDispatchToProps = {
 export default connect(
   null,
   mapDispatchToProps
-)(Home);
+)(HomeView);

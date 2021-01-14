@@ -6,7 +6,7 @@
  // Dropdown item component.
 import React, { useCallback, useState } from "react";
 
-const Item = ({ onClick, value, children }) => {
+const Item = ({ onClick, children }) => {
   return (
     // eslint-disable-next-line jsx-a11y/anchor-is-valid
     <a className="dropdown-item" href="#" onClick={onClick}>

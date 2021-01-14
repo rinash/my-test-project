@@ -5,9 +5,9 @@
 
 import React, { useCallback } from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Wrapper } from "./Common/Button";
+import { Button, Wrapper } from "../components/styled/Button";
 
-export default function NotFound() {
+const NotFoundView = () => {
   let history = useHistory();
 
   const clickHandler = useCallback(
@@ -27,4 +27,6 @@ export default function NotFound() {
       </Wrapper>
     </div>
   );
-}
+};
+
+export default NotFoundView;
